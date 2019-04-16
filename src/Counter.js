@@ -3,20 +3,28 @@ import React from 'react'
 import { incActionCreator, decActionCreator } from './state/counter'
 import { connect } from "react-redux"
 
+import Button from '@material-ui/core/Button'
+
 const Counter = (props) => {
     return (
-        <div>
+        <div style={{textAlign: 'center'}}>
             <h1>{props._number}</h1>
-            <button
+            <Button
+                style={{ height: '50px', margin: '10px 10px 30px'}}
+                variant="outlined"
+                color="primary"
                 onClick={props._dec}
             >
                 -
-            </button>
-            <button
+            </Button>
+            <Button
+                style={{ height: '50px', margin: '10px 10px 30px'}}
+                variant="outlined"
+                color="primary"
                 onClick={props._inc}
             >
                 +
-            </button>
+            </Button>
         </div>
     )
 }
